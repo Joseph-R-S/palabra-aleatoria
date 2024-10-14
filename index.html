@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-scramble</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/a101ea8c75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="contenido-scramble">
+            <h2 class="nome-jogo">word scramble</h2>
+
+            <div class="word">
+                <span class="scramble"></span>
+            </div>
+            <div class="contador">
+                <div class="tries">
+                    <p class="tries-contenido"> </p>
+                    <div class="container-circle">
+                        <span class="circle" id="reset1"></span>
+                        <span class="circle" id="reset2"></span>
+                        <span class="circle" id="reset3"></span>
+                        <span class="circle" id="reset4"></span>
+                        <span class="circle" id="reset5"></span>
+                    </div>
+                </div>
+                <div class="mistakes">
+                    <p>Mistakes:</p>
+                    <div class="container-letras">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="resp-scramble">
+
+            </div>
+
+            <div class="contenedor-btns">
+                <button onclick="getPalabra();">Random</button>
+                <button onclick="limparInputs();">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>Desarrollado por: Joseph Sanchez <a href="https://wa.me/+5565981429242" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

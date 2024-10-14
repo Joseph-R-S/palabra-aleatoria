@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --letra: "Outfit", sans-serif;
+    --roxo: #7429C6;
+    --rosa: #C951E7;
+    --morado: #672171;
+    --gris: #4A5567;
+    --grisClaro: #97A3B6;
+    --oscuro: #030616;
+    --branco: #F2F5F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/bg-guess-the-word.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 95vh;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+}
+
+.contenido-scramble {
+    width: 350px;
+    height: 350px;
+    background: var(--oscuro);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome-jogo {
+    font-family: var(--letra);
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    /*text gradient*/
+    background: linear-gradient(to right, var(--morado), var(--rosa));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.word{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gris);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    
+}
+
+.scramble{
+    color: var(--grisClaro);
+    font-size: 2rem;
+    letter-spacing: 7px;
+}
+
+
+
+.contador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 40px;
+    margin-top: 1rem;
+}
+
+.contador p{
+    color: var(--gris);
+    font-size: 12px;
+    font-family: var(--letra);
+}
+
+.tries {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-left: 2.5rem;
+}
+
+.container-circle{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.circle {
+    width: 7px;
+    height: 7px;
+    background-color: var(--gris);
+    border-radius: 50%;
+}
+
+.morado{
+    background-color: var(--morado);
+}
+
+.mistakes{
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.container-letras{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.letra{
+    color: var(--grisClaro);
+    font-size: 20px;
+}
+
+.resp-scramble{
+    margin-top: 1rem;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.try{
+    width: 30px;
+    height: 30px;
+    border: solid 2px var(--grisClaro);
+    background: var(--oscuro);
+    border-radius: 5px;
+    color: var(--branco);
+    font-family: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 2px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.try:hover{
+    border: solid 2px var(--morado);
+}
+
+.contenedor-btns{
+    margin-top: 1.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+button{
+    width: 100px;
+    height: 35px;
+    color: var(--branco);
+    background-color: var(--rosa);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px var(--morado);
+    transition: 0.2s ease-in-out;
+    font-family: var(--letra);
+    font-size: 14px;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (min-width: 640px) {
+    .contenedor {
+        height: 100%;
+    }
+    .contenido-scramble {
+        width: 450px;
+        height: 450px;
+    }
+
+    .resp-scramble{
+        margin-top: 2rem;
+    }
+
+    .try{
+        width: 35px;
+        height: 35px;
+    }
+
+    .contenedor-btns{
+        margin-top: 2.5rem;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    color: var(--branco);
+    font-family: var(--letra);
+}
+
+footer a{
+    color: var(--branco);
+    margin-left: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+footer a:hover{
+    color: var(--gris);
+}
+
